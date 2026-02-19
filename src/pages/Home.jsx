@@ -4,6 +4,8 @@ import './Home.css';
 import heroBg from '../assets/hero-bg.png';
 
 
+import promoImg from '../assets/promo.jpg';
+
 const FEATURES = [
   { icon: '📱', title: 'Aplicación móvil', desc: 'Controlá todo desde tu celular. Revisá cámaras, recibí alertas y gestioná tu sistema desde cualquier lugar.' },
   { icon: '🎥', title: 'Grabación 24/7', desc: 'Registro continuo con almacenamiento en la nube. Accedé al historial cuando lo necesités.' },
@@ -65,6 +67,11 @@ const Home = () => {
               <span>✓ Sin contrato</span>
               <span>✓ Presupuesto sin costo</span>
             </div>
+          </div>
+
+          <div className="hero-promo">
+            <div className="promo-badge">Oferta 2026</div>
+            <img src={promoImg} alt="Oferta Especial 2026" />
           </div>
         </div>
       </section>
