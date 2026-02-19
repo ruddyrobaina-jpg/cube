@@ -50,14 +50,12 @@
 }
 
 /* ... inside .hero-promo ... */
+/* ... inside .hero-promo ... */
 .hero-promo {
   position: relative;
   flex: 0 0 350px;
   max-width: 400px;
   animation: float 6s ease-in-out infinite;
-  /* Adjust position: up and right */
-  margin-top: -4rem; 
-  margin-right: -2rem; 
 }
 
 /* ... mobile media query ... */
@@ -66,19 +64,14 @@
   .hero-content { 
     flex-direction: column;
     text-align: center;
-    /* Reduce padding to move content up */
-    padding-top: calc(var(--nav-h) + 0.5rem); 
-    padding-bottom: 2rem;
+    padding-top: calc(var(--nav-h) + 2rem);
   }
-  .hero-text { margin-bottom: 2rem; }
+  .hero-text { margin-bottom: 3rem; }
   .hero-promo { 
     flex: 0 0 auto; 
     width: 80%; 
     max-width: 320px; 
     margin: 0 auto; 
-    /* Reset margins for mobile so it doesn't look weird */
-    margin-top: 0;
-    margin-right: auto;
   }
   
   .highlights-grid { grid-template-columns: repeat(2, 1fr); }
