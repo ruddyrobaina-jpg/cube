@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap');
+
+:root {
+  /* === PALETA SIMPLISAFE === */
+  --navy:        #0a1628;   /* Fondo oscuro principal */
+  --navy-mid:    #0f2040;   /* Fondo secciones */
+  --navy-light:  #1a3a5c;   /* Bordes y hover */
+  --white:       #ffffff;
+  --off-white:   #f5f7fa;
+  --orange:      #e8521a;   /* CTA principal */
+  --orange-dark: #c44515;
+  --text-light:  #b0bec5;   /* Texto secundario sobre oscuro */
+  --text-dark:   #1a2332;   /* Texto sobre blanco */
+  --text-muted:  #64748b;
+  --border-dark: rgba(255,255,255,0.1);
+  --border-light: #e2e8f0;
+
+  /* === TIPOGRAFÍA === */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-head: 'Montserrat', sans-serif;
+
+  /* === ESPACIADO === */
+  --container: 1200px;
+  --nav-h: 72px;
+  --radius: 6px;
+  --radius-lg: 12px;
+
+  /* === SOMBRAS === */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.18);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.3);
+  --shadow-orange: 0 8px 32px rgba(232,82,26,0.35);
+
+  /* === TRANSICIONES === */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================== RESET ===================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ===================== LAYOUT ===================== */
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===================== TIPOGRAFÍA ===================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; }
+h3 { font-size: 1.4rem; font-weight: 700; }
+
+/* ===================== BOTONES ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: all 0.2s var(--ease);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+  box-shadow: var(--shadow-orange);
+}
+.btn-primary:hover {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(232,82,26,0.45);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.5);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-dark);
+  border-color: var(--border-light);
+}
+.btn-outline-dark:hover {
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+.btn-sm {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+/* ===================== BADGE ===================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(232,82,26,0.15);
+  color: #ff8a5c;
+  border: 1px solid rgba(232,82,26,0.3);
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+/* ===================== SECCIÓN ===================== */
+.section-dark  { background: var(--navy); }
+.section-mid   { background: var(--navy-mid); }
+.section-light { background: var(--off-white); }
+
+section { padding: 7rem 0; }
